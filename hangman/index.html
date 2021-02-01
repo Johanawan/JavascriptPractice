@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- My CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Enter a letter</p>
+    <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+            <!-- Pole -->
+            <line x1="60" y1="20" x2="140" y2="20"/> 
+            <line x1="140" x2="140" y1="20" y2="50"/>
+            <line x1="60" x2="60" y1="20" y2="230"/>
+            <line x1="10" x2="150" y1="230" y2="230"/>
+
+            <!-- Head -->
+            <circle cx="140" cy="70" r="17" class="figure-part"/>
+            <!-- Body -->
+            <line x1="140" x2="140" y1="90" y2="150" class="figure-part"/>
+            <!-- Right arm -->
+            <line x1="140" x2="160" y1="105" y2="130" class="figure-part"/>
+            <!-- Left arm -->
+            <line x1="140" x2="120" y1="105" y2="130" class="figure-part"/>
+            <!-- Right leg -->
+            <line x1="140" x2="160" y1="150" y2="195" class="figure-part"/>
+            <!-- Left leg -->
+            <line x1="140" x2="120" y1="150" y2="195" class="figure-part"/>
+            
+        </svg>
+    </div>
+</body>
+</html>
