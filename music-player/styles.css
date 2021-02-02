@@ -56,6 +56,7 @@ body {
   bottom: 0;
   left: 0;
   animation: rotate 3s linear infinite;
+
   animation-play-state: paused;
 }
 
@@ -81,9 +82,9 @@ body {
 }
 
 .action-btn {
-  background-color: white;
+  background-color: #fff;
   border: 0;
-  color: #dfdfdf;
+  color: #dfdbdf;
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
