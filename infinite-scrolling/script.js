@@ -2,7 +2,7 @@ const postsContainer = document.getElementById("posts-container")
 const loading = document.querySelector(".loader")
 const filter = document.getElementById("filter")
 
-let limit = 3;
+let limit = 5;
 let page = 1;
 
 // Fetch posts from API
@@ -34,5 +34,26 @@ async function showPosts() {
     })
 }
 
+// Show loader and fetch more posts
+function showLoading() {
+    loading.classList.add("show")
+
+    setTimeout(() => {
+        loading.classList.remove("show")
+    }, 1000)
+
+    setTimeout(() => {
+        page++;
+        showPosts();
+    }, 300)
+}
 // Show initial posts
 showPosts();
+
+window.addEventListener('scroll', () => {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  
+    if (scrollTop + clientHeight >= scrollHeight - 5) {
+      showLoading();
+    }
+  });
